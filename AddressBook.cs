@@ -93,6 +93,7 @@ namespace AddressBookProgram
             Program program = new Program();
             program.DisplayContacts(ContactArray, Contact);
         }
+
         public void DeleteContact()
         {
             Console.WriteLine("Enter the first name of the contact to delete:");

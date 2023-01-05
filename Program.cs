@@ -13,7 +13,7 @@ namespace AddressBookProgram
         {
             Console.WriteLine("Welcome to Address Book program");
             AddressBook add = new AddressBook();
-            Console.WriteLine("Enter Number of contact to add");
+            Console.WriteLine("Enter Number of contact to add to Address Book");
             int Contact = Convert.ToInt32(Console.ReadLine());
             while (Contact > 0)
             {
