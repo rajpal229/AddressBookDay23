@@ -1,18 +1,17 @@
-﻿using AddressBookProgram;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AddressBookDay23
+namespace AddressBookProgram
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Wellcome to Address Book program");
+            Console.WriteLine("Welcome to Address Book program");
             AddressBook add = new AddressBook();
             Console.WriteLine("Enter Number of contact to add");
             int Contact = Convert.ToInt32(Console.ReadLine());
@@ -37,6 +36,12 @@ namespace AddressBookDay23
                 add.CreateContact(FirstName, LastName, Address, City, State, Email, Zip, PhoneNumber);
                 Contact--;
             }
+            Console.WriteLine("Do YOu Want To MOdify(Y/N)");
+            char ch = Convert.ToChar(Console.ReadLine());
+            if (ch == 'Y' || ch == 'y')
+            {
+                add.EditContact();
+            }
         }
         public void DisplayContacts(AddressBook[] ContactArray, int n)
         {
@@ -51,6 +56,5 @@ namespace AddressBookDay23
                 Console.WriteLine("PhoneNumber {0}", ContactArray[i].PhoneNumber);
             }
         }
-
     }
 }
