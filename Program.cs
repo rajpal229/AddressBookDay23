@@ -89,7 +89,6 @@ namespace AddressBookProgram
                         }
                         break;
                 }
-
             } while (choice != 8);
         }
     }
