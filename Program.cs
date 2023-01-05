@@ -36,13 +36,27 @@ namespace AddressBookProgram
                 add.CreateContact(FirstName, LastName, Address, City, State, Email, Zip, PhoneNumber);
                 Contact--;
             }
-            Console.WriteLine("Do YOu Want To MOdify(Y/N)");
-            char ch = Convert.ToChar(Console.ReadLine());
-            if (ch == 'Y' || ch == 'y')
+            while (true)
             {
-                add.EditContact();
+                Console.WriteLine("1.Edit contact\n2.Delete contact");
+
+                int option = Convert.ToInt32(Console.ReadLine());
+                switch (option)
+                {
+                    case 1:
+                        add.EditContact();
+
+                        break;
+                    case 2:
+                        add.DeleteContact();
+                        break;
+                    default:
+                        Console.WriteLine("Enter Valid Option");
+                        break;
+                }
             }
         }
+
         public void DisplayContacts(AddressBook[] ContactArray, int n)
         {
             for (int i = 0; i < n; i++)
